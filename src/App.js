@@ -21,6 +21,10 @@ function App() {
       return;
     }
 
+    setIsLoading(true);
+    setBookNotFound(false);
+    setErrorMessage(null);
+
     const trimedInputValue = book.trim().replace(/\s/g, "%20");
 
     axios
