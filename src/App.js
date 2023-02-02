@@ -8,6 +8,9 @@ import classes from "./App.module.css";
 
 function App() {
   const [bookList, setBookList] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [bookNotFound, setBookNotFound] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
 
   const fetchBooksHandler = (book) => {
     if (book === null) {
