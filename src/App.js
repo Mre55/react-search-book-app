@@ -1,22 +1,19 @@
-import React, { useState } from 'react';
-import classes from './App.module.css';
+import React, { useState } from "react";
+
+import ResultList from "./components/ResultList/ResultList";
+import SearchBar from "./components/SearchBar/SearchBar";
+import ToReadList from "./components/ToReadList/ToReadList";
+import classes from "./App.module.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.container}>
+      <SearchBar />
+
+      <main>
+        <ResultList />
+        <ToReadList />
+      </main>
     </div>
   );
 }
