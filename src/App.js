@@ -32,6 +32,10 @@ function App() {
       .then((res) => {
         const response = res.data;
 
+        if (!response.results.length > 0) {
+          setBookNotFound(true);
+        }
+
         const loadedBooks = [];
 
         for (const key in response.results) {
@@ -42,8 +46,15 @@ function App() {
             image: response.results[key].formats,
           });
         }
+
+        setBookList(loadedBooks);
+        setIsLoading(false);
       })
-      .catch((error) => {});
+      .catch((error) => {
+        setIsLoading(false);
+        setBookNotFound(false);
+        setErrorMessage(true);
+      });
   };
 
   const addToReadListHandler = (event) => {
