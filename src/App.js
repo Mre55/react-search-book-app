@@ -76,7 +76,7 @@ function App() {
       <SearchBar />
 
       <main>
-        <ResultList resultList={bookList} />
+        <ResultList resultList={bookList} onAdd={addToReadListHandler} />
         <ToReadList toReadList={bookList} />
       </main>
     </div>
