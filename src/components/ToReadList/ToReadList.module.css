@@ -1,0 +1,54 @@
+.book-to-read-container {
+  background: #cee2f4;
+  border: 2px solid;
+  max-height: 80vh;
+  overflow-y: scroll;
+  width: 60%;
+  min-height: 77vh;
+}
+
+.book-to-read-list {
+  width: 80%;
+  padding: 0;
+  margin: 0 0 0 20px;
+}
+
+.book-img-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.book-img {
+  height: 60px;
+  max-width: 45px;
+}
+
+.book-to-read {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid;
+  margin: 0 0 15px;
+  padding: 10px 20px;
+  box-shadow: 0 3px 15px rgb(0 0 0 / 35%);
+  background: #f3f3f3;
+}
+
+.pick-btn {
+  border: none;
+  background: #1052bd;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.book-to-read-title {
+  padding-left: 10px;
+  font-weight: 500;
+  font-size: 17px;
+  margin-top: 10px;
+}
