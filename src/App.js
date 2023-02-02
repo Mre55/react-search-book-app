@@ -44,8 +44,8 @@ function App() {
       <SearchBar />
 
       <main>
-        <ResultList />
-        <ToReadList />
+        <ResultList resultList={bookList} />
+        <ToReadList toReadList={bookList} />
       </main>
     </div>
   );
