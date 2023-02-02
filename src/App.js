@@ -77,7 +77,10 @@ function App() {
 
       <main>
         <ResultList resultList={bookList} onAdd={addToReadListHandler} />
-        <ToReadList toReadList={bookList} />
+        <ToReadList
+          toReadList={bookList}
+          onRemove={removeFromReadListHandler}
+        />
       </main>
     </div>
   );
