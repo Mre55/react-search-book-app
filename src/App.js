@@ -39,6 +39,22 @@ function App() {
       .catch((error) => {});
   };
 
+  const addToReadListHandler = (event) => {
+    const bookToBeAddedIndex = bookList.findIndex((item) => item.id === event);
+
+    const bookToBeAdded = bookList[bookToBeAddedIndex];
+    let updatedBooks;
+
+    const updatedBook = {
+      ...bookToBeAdded,
+      picked: true,
+    };
+    updatedBooks = [...bookList];
+    updatedBooks[bookToBeAddedIndex] = updatedBook;
+
+    setBookList(updatedBooks);
+  };
+
   return (
     <div className={classes.container}>
       <SearchBar />
