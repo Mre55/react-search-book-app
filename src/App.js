@@ -5,6 +5,11 @@ import ResultList from "./components/ResultList/ResultList";
 import SearchBar from "./components/SearchBar/SearchBar";
 import ToReadList from "./components/ToReadList/ToReadList";
 import classes from "./App.module.css";
+import {
+  BOOK_NOT_FOUND_MESSAGE,
+  ERROR_MESSAGE,
+  IS_LOADING,
+} from "../src/Helpers/Constants";
 
 function App() {
   const [bookList, setBookList] = useState([]);
@@ -88,6 +93,19 @@ function App() {
 
     setBookList(updatedBooks);
   };
+
+  let content = "";
+  if (errorMessage) {
+    content = ERROR_MESSAGE;
+  }
+
+  if (bookNotFound) {
+    content = BOOK_NOT_FOUND_MESSAGE;
+  }
+
+  if (isLoading) {
+    content = IS_LOADING;
+  }
 
   return (
     <div className={classes.container}>
