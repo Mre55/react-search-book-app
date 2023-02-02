@@ -73,7 +73,7 @@ function App() {
 
   return (
     <div className={classes.container}>
-      <SearchBar />
+      <SearchBar onFetch={fetchBooksHandler} />
 
       <main>
         <ResultList resultList={bookList} onAdd={addToReadListHandler} />
