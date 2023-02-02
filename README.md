@@ -4,7 +4,7 @@ Welcome to the search book app, in this web app you will be able to search a boo
 
 ## Live Demo
 
-[Live Demo link](https://stellular-dango-7c8085.netlify.app/)
+[Live Demo link](https://react-search-book-app.netlify.app/)
 
 
 ## 🧩 Built With
