@@ -55,6 +55,22 @@ function App() {
     setBookList(updatedBooks);
   };
 
+  const removeFromReadListHandler = (id) => {
+    const bookToBeAddedIndex = bookList.findIndex((item) => item.id === id);
+
+    const bookToBeAdded = bookList[bookToBeAddedIndex];
+    let updatedBooks;
+
+    const updatedItem = {
+      ...bookToBeAdded,
+      picked: false,
+    };
+    updatedBooks = [...bookList];
+    updatedBooks[bookToBeAddedIndex] = updatedItem;
+
+    setBookList(updatedBooks);
+  };
+
   return (
     <div className={classes.container}>
       <SearchBar />
